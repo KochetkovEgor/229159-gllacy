@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="hidden">Магазин мороженого Глейси</h1>
+      <a class="logo" href="index.html">
+        <img src="img/logo.png" width="200" height="100" alt="Магазин мороженого Глейси">
+      </a>
+
+      <nav class="site-navigation">
+        <ul>
+          <li><a href="#">Каталог</a>
+          <ul class="sub-menu">
+            <li><a href="#">Новинки</a>
+            <li><a>Сливочное</a>
+            <li><a href="#">Щербеты</a>
+            <li><a href="#">Фруктовый лед</a>
+            <li><a href="#">Мелорин</a>
+          </ul>
+          <li><a href="#">Доставка и оплата</a>
+          <li><a href="#">О Компании</a>
+        </ul>
+      </nav>
+
+      <form class="search" action="https://echo.htmlacademy.ru" method="get">
+        <input class="search-field hidden" type="search" name="search-field"
+         placeholder="Что ищем?">
+        <button class="search-btn hidden" type="submit" name="search-btn"
+         value="Поиск">Найти</button>
+      </form>
+
+      <section class="user-block">
+        <h2 class="hidden">Кабинет пользователя:</h2>
+        <a class="login" href="#">Вход</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="client-email">Ваша электропочта:</label>
+          <input class="mail" type="email" name="email" id="client-email"
+          placeholder="Электронная почта">
+          <label for="client-password">Ваш пароль:</label>
+          <input class="password" type="password" name="password" id="client-password"
+          placeholder="Пароль">
+          <button class="btn" type="submit" value="Войти на сайт">Войти</button>
+        </form>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </section>
+
+      <a class="cart" href="#"><span class="hidden">В корзине товаров: </span>2 товара</a>
+
+      <section class="contacts">
+        <h2 class="hidden">Связаться с нами:</h2>
+        <span class="hidden">Мы принимаем заказы </span>С 10 до 20, ежедневно<br>
+        <span class="hidden">Наш телефон: </span><a href="tel:88124502525">8 812 450-25-25</a>
+      </section>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <a href="#">Каталог</a>
+        <a>Сливочное</a>
+      </nav>
+      <h2>Сливочное мороженое</h2>
+      <h3 class="hidden">Фильтр товаров:</h3>
+      <form class="filter-products" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="sort">
+          <legend>Сортировка:</legend>
+          <select name="sort-by">
+            <option value="popular">по популярности</option>
+            <option value="price-low">по увеличению цены</option>
+            <option value="price-high">по уменьшению цены</option>
+            <option value="by-new">новинки</option>
+          </select>
+        </fieldset>
+        <fieldset class="price-range">
+          <legend>Цена:</legend>
+          <div class="toggle toggle-min">
+            <div class="min-price">
+              <input type="text" name="min-price" value="100">
+              руб.
+            </div>
+          </div>
+          <div class="toggle toggle-max">
+            <div class="max-price">
+              <input type="text" name="max-price" value="500">
+              руб.
+            </div>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="fat-content">
+          <legend>Жирность:</legend>
+          <input type="radio" name="fat-percent" value="0percent" id="0percent">
+          <label for="0percent">0%</label>
+          <input type="radio" name="fat-percent" value="10percent" id="10percent" checked>
+          <label for="10percent">10%</label>
+          <input type="radio" name="fat-percent" value="30percent" id="30percent">
+          <label for="30percent">до 30%</label>
+          <input type="radio" name="fat-percent" value="over30percent" id="over30percent">
+          <label for="over30percent">выше 30%</label>
+        </fieldset>
+        <fieldset class="fillers">
+          <legend>Наполнители:</legend>
+          <input type="checkbox" name="filler" value="chocolate" id="chocolate" checked>
+          <label for="chocolate">шоколадные</label>
+          <input type="checkbox" name="filler" value="sugar-powder" id="sugar-powder" checked>
+          <label for="sugar-powder">сахарные присыпки</label>
+          <input type="checkbox" name="filler" value="fruit" id="fruit">
+          <label for="fruit">фрукты</label>
+          <input type="checkbox" name="filler" value="syrup" id="syrup">
+          <label for="syrup">сиропы</label>
+          <input type="checkbox" name="filler" value="jam" id="jam">
+          <label for="jam">джемы</label>
+        </fieldset>
+        <button class="btn" type="submit" name="filter-btn" value="Применить">Применить</button>
+      </form>
+
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        <p><span class="hidden">Цена: </span>310₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочно-кофейное с кусочками шоколада</p>
+        <p><span class="hidden">Цена: </span>380₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+        <p><span class="hidden">Цена: </span>355₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное крем-брюле с карамельной подливкой</p>
+        <p><span class="hidden">Цена: </span>415₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное с брусничным джемом</p>
+        <p><span class="hidden">Цена: </span>325₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочно-черничное с цельными ягодами черники</p>
+        <p><span class="hidden">Цена: </span>410₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочно-лимонное с карамельной присыпкой</p>
+        <p><span class="hidden">Цена: </span>375₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное с шоколадной стружкой</p>
+        <p><span class="hidden">Цена: </span>320₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочно-ванильное с кусочками шоколада</p>
+        <p><span class="hidden">Цена: </span>440₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочноe с ментоловым сиропом</p>
+        <p><span class="hidden">Цена: </span>435₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное с кусочками черного шоколада</p>
+        <p><span class="hidden">Цена: </span>355₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+      <article class="catalog-item">
+        <h3 class="hidden">Мороженое</h3>
+        <img src="" width="100" height="100" alt="фото мороженого">
+        <p>Сливочное с мятным сиропом</p>
+        <p><span class="hidden">Цена: </span>420₽/кг</p>
+        <a href="#">Быстрый просмотр</a>
+      </article>
+
+      <div class="pagination">
+        <a class="btn page-prev">Назад</a>
+        <div class="pagination-pages">
+          <a class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
+        <a class="btn page-next" href="#">Вперёд</a>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <section class="social">
+        <h2 class="hidden">Присоединяйтесь к нам в социальных сетях:</h2>
+        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+      </section>
+
+      <nav class="business-information">
+        <h2 class="hidden">Деловая информация</h2>
+        <a href="#">Для поставщиков</a>
+        <a href="#">О производстве</a>
+        <a href="#">Наши документы</a>
+        <a href="#">Экологические стандарты</a>
+      </nav>
+
+      <a class="footer-copyright" href="#">Сделано в HTML Academy © 2017</a>
+    </footer>
+
+  </body>
+</html>
